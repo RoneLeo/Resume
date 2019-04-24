@@ -1,0 +1,303 @@
+@charset "UTF-8";
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #F5F5F5;
+    /*header部分已完成*/
+}
+.page .header {
+    background-color: #46ACF8;
+    background-image: url("http://coding.imweb.io/img/project/resume/bg.png");
+    background-repeat: repeat;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.page .header, .page .content {
+    width: 50%;
+    height: 100%;
+    align-self: center;
+}
+.page .header .photo-and-info, .page .header .contact-list, .page .header .eduction-info, .page .content .photo-and-info, .page .content .contact-list, .page .content .eduction-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+.page .header .photo-and-info, .page .content .photo-and-info {
+    flex-direction: column;
+}
+.page .header .photo-and-info .photo, .page .header .photo-and-info .name, .page .header .photo-and-info .introduction, .page .content .photo-and-info .photo, .page .content .photo-and-info .name, .page .content .photo-and-info .introduction {
+    align-self: center;
+}
+.page .header .photo-and-info .photo, .page .content .photo-and-info .photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #46ACF8;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #ffffff;
+    z-index: 2;
+}
+.page .header .photo-and-info .photo img, .page .content .photo-and-info .photo img {
+    width: 140px;
+    height: 140px;
+    z-index: 1;
+    padding-bottom: 6px;
+}
+.page .header .photo-and-info .name, .page .content .photo-and-info .name {
+    font-size: 24px;
+    line-height: 2.5;
+    letter-spacing: 2px;
+}
+.page .header .photo-and-info .introduction, .page .content .photo-and-info .introduction {
+    line-height: 2;
+}
+.page .header .contact-list, .page .header .eduction-info, .page .content .contact-list, .page .content .eduction-info {
+    margin-top: 20px;
+}
+.page .header .contact-list .item, .page .content .contact-list .item {
+    line-height: 1.8;
+    letter-spacing: 1px;
+}
+.page .header .eduction-info .table-wrapper, .page .content .eduction-info .table-wrapper {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid RGBA(204, 197, 168, 0.6);
+    border-radius: 10px;
+}
+.page .header .eduction-info .table-wrapper .table-bd tr, .page .content .eduction-info .table-wrapper .table-bd tr {
+    line-height: 1.8;
+}
+.page .header .eduction-info .table-wrapper .table-bd td + td, .page .content .eduction-info .table-wrapper .table-bd td + td {
+    padding-left: 40px;
+}
+.page .content {
+    overflow: auto;
+    /*工作经历已完成*/
+}
+.page .content .work-experience, .page .content .special-skill {
+    padding: 30px 20px 40px;
+}
+.page .content .title {
+    height: 40px;
+}
+.page .content .title-line:before {
+    content: "";
+    display: inline-block;
+    height: 1px;
+    width: calc(50% - 70px);
+    background-color: #ccc;
+    /*颜色需与主题大背景色一致*/
+    position: relative;
+    top: -9px;
+}
+.page .content .title-line:after {
+    content: "";
+    display: inline-block;
+    height: 1px;
+    width: calc(50% - 70px);
+    background-color: #ccc;
+    /*颜色需与主题大背景色一致*/
+    position: relative;
+    top: -9px;
+}
+.page .content .title-line-text {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    color: #46ACF8;
+    font-size: 22px;
+    line-height: 40px;
+    letter-spacing: 2px;
+}
+.page .content .work-experience-list {
+    margin-top: 10px;
+    position: relative;
+}
+.page .content .work-experience-list .time-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: calc(100% - 10px);
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+.page .content .work-experience-list .time-line .line {
+    width: 1px;
+    height: 100%;
+    align-self: center;
+    background-color: #ccc;
+}
+.page .content .work-experience-list .list-item-content .item {
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+}
+.page .content .work-experience-list .list-item-content .item:hover {
+    color: #333;
+    font-weight: 500;
+}
+.page .content .work-experience-list .list-item-content .item .circle-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 2;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.page .content .work-experience-list .list-item-content .item .circle-wrapper .circle {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 3px solid #C6E0F5;
+    background-color: #46ACF8;
+    animation: bling 1s ease-in 1s infinite alternate;
+}
+.page .content .work-experience-list .list-item-content .item .item-content {
+    display: flex;
+    flex-direction: column;
+}
+.page .content .work-experience-list .list-item-content .item .item-content .task {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #999;
+    font-weight: 300;
+}
+.page .content .special-skill-list .skill-item {
+    margin: 15px 10px;
+    font-size: 16px;
+}
+.page .content .special-skill-list .skill-item:hover {
+    font-size: 18px;
+    color: #46ACF8;
+}
+.page .content .special-skill-list .skill-item .skill-item-name {
+    display: flex;
+    justify-content: space-between;
+}
+.page .content .special-skill-list .skill-item .skill-item-name .skill-name {
+    align-self: center;
+}
+.page .content .special-skill-list .skill-item .skill-item-name .level {
+    font-size: 12px;
+    padding: 2px 15px;
+    color: #666;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    align-self: center;
+}
+.page .content .special-skill-list .skill-item .master {
+    font-size: 14px;
+    color: #999;
+}
+.page .content .special-skill-list .skill-item .line {
+    position: relative;
+    margin-top: 8px;
+    height: 5px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #bbbbbb;
+}
+.page .content .special-skill-list .skill-item .line .color-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #0073D7, #46ACF8);
+}
+.page .content .special-skill-list .skill-item .line .color-line .white {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 20px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #0073D7, #46ACF8);
+    animation: line-bling 5s ease-in 1s infinite;
+}
+
+@keyframes bling {
+    from {
+        border-width: 4px;
+    }
+    50% {
+        border-width: 3px;
+    }
+    to {
+        border-width: 2px;
+    }
+}
+@keyframes line-bling {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px) {
+    body {
+        position: relative;
+        height: auto;
+        overflow-y: scroll;
+    }
+    body .page {
+        position: relative;
+        display: block;
+    }
+    body .page .header, body .page .content {
+        width: 100%;
+    }
+    body .page .header {
+        position: absolute;
+        height: 100vh;
+        padding: 80px 0;
+    }
+    body .page .header .photo-and-info .photo {
+        width: 100px;
+        height: 100px;
+    }
+    body .page .header .photo-and-info .photo img {
+        width: 90px;
+        height: 90px;
+    }
+    body .page .header .photo-and-info .name {
+        font-size: 20px;
+        line-height: 2.5;
+    }
+    body .page .header .photo-and-info .introduction {
+        font-size: 14px;
+        line-height: 2;
+    }
+    body .page .header .contact-list .item {
+        line-height: 1.8;
+        font-size: 14px;
+    }
+    body .page .header .contact-list .item .item-icon {
+        font-size: 16px;
+    }
+    body .page .header .table-bd {
+        line-height: 1.8;
+        font-size: 14px;
+    }
+    body .page .header .table-bd td + td {
+        padding-left: 20px;
+    }
+    body .page .content {
+        padding-top: 100vh;
+        height: auto;
+    }
+}
