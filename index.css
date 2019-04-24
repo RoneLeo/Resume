@@ -65,6 +65,7 @@
 .page .header .contact-list .item, .page .content .contact-list .item {
     line-height: 1.8;
     letter-spacing: 1px;
+    color: #ffffff;
 }
 .page .header .eduction-info .table-wrapper, .page .content .eduction-info .table-wrapper {
     display: inline-block;
