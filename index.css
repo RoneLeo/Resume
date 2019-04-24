@@ -300,4 +300,10 @@
         padding-top: 100vh;
         height: auto;
     }
+    body .page .content .title-line-text {
+        font-size: 20px;
+    }
+    body .page .content .list-item-content .item {
+        font-size: 16px;
+    }
 }

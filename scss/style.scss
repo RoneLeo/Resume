@@ -324,6 +324,12 @@ $border-color: #C6E0F5;
       .content {
         padding-top: 100vh;
         height: auto;
+        .title-line-text {
+          font-size: 20px;
+        }
+        .list-item-content .item {
+          font-size: 16px;
+        }
       }
     }
   }
